@@ -40,12 +40,13 @@ function Reveal({ children, className = "", delay = 0 }) {
   );
 }
 
-function Button({ href, children, variant = "dark", icon: Icon }) {
+function Button({ href, children, variant = "dark", icon: Icon, download }) {
   const isDark = variant === "dark";
 
   return (
     <a
       href={href}
+      download={download}
       className={`group inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold transition duration-300 ${
         isDark
           ? "bg-white text-ink hover:bg-champagne"
@@ -109,7 +110,7 @@ function Nav() {
           ))}
         </div>
         <a
-          href="mailto:yogeshshange15@gmail.com"
+          href="mailto:yogeshelango15@gmail.com"
           className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-ink transition hover:bg-champagne"
           aria-label="Email Yogeshvaar"
         >
@@ -387,7 +388,7 @@ function Resume() {
             patents, and hackathon recognition.
           </p>
         </div>
-        <Button href="/Yogesh_Resume.pdf" variant="light" icon={Download}>
+        <Button href="/Yogesh_Resume.pdf" download variant="light" icon={Download}>
           Download Resume
         </Button>
       </Reveal>
@@ -411,10 +412,10 @@ function Contact() {
         </Reveal>
         <Reveal delay={0.08} className="rounded-[2rem] bg-ink p-7 text-white shadow-glass">
           <a
-            href="mailto:yogeshshange15@gmail.com"
+            href="mailto:yogeshelango15@gmail.com"
             className="group flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-white/[0.06] p-5 transition hover:bg-white/[0.1]"
           >
-            <span className="break-all text-lg font-semibold">yogeshshange15@gmail.com</span>
+            <span className="break-all text-lg font-semibold">yogeshelango15@gmail.com</span>
             <Mail className="h-5 w-5 shrink-0 text-champagne" />
           </a>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
